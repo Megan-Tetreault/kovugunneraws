@@ -1,10 +1,15 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: index.html
     destination: /var/www/html
+  - source: staticwebbapp.config.json
+    destination: /var/www/html
+  - source: api
+    destination: /var/www/html/api
 hooks:
   AfterInstall:
     - location: scripts/restart_server.sh
       timeout: 60
       runas: root
+
