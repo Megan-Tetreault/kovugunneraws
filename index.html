@@ -39,7 +39,7 @@
   <div id="gallery"></div>
 
   <script>
-    // Fetch images from EC2 backend (which lists S3 objects)
+    //Fetch images from EC2 backend (which lists S3 objects)
     fetch('http://34.201.111.213:3000/api/listimages')
       .then(res => res.json())
       .then(urls => {
