@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "route": "/api/uploadimage",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/api/listimages",
+      "allowedRoles": ["authenticated"]
+    }
+  ]
+}

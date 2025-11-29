@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to My AWS Project</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #0078D4;
+      color: white;
+      padding: 20px;
+    }
+    img {
+      max-width: 300px;
+      margin: 20px auto;
+    }
+    form, #gallery {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to my Kovu and Gunner AWS Website</h1>
+    <p>Built by Megan Tetreault</p>
+  </header>
+
+  <!-- Upload Form -->
+  <form id="uploadForm" action="http://34.201.111.213:3000/api/uploadimage" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" />
+    <button type="submit">Upload to AWS S3</button>
+  </form>
+
+  <div id="gallery"></div>
+
+  <script>
+    // Fetch images from EC2 backend (which lists S3 objects)
+    fetch('http://34.201.111.213:3000/api/listimages')
+      .then(res => res.json())
+      .then(urls => {
+        const gallery = document.getElementById('gallery');
+        urls.forEach(url => {
+          const img = document.createElement('img');
+          img.src = url;
+          img.alt = "Uploaded image";
+          gallery.appendChild(img);
+        });
+      });
+  </script>
+</body>
+</html>
