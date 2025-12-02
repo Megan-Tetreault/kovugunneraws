@@ -38,6 +38,43 @@
 
   <div id="gallery"></div>
 
+  <h2>My Dog Gallery (Static)</h2>
+<div style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
+  <div>
+    <img src="images/Kovu.jpg" alt="Kovu" width="300">
+    <p>Kovu</p>
+  </div>
+  <div>
+    <img src="images/gunner.jpg" alt="Gunner" width="300">
+    <p>Gunner</p>
+  </div>
+  <div>
+    <img src="images/kovugunner.jpg" alt="Kovu and Gunner" width="300">
+    <p>Kovu & Gunner</p>
+  </div>
+  <div>
+    <img src="images/kovu side by side.jpg" alt="Kovu side by side" width="300">
+    <p>Kovu Side by Side</p>
+  </div>
+  <div>
+    <img src="images/gunner side by side.jpg" alt="Gunner side by side" width="300">
+    <p>Gunner Side by Side</p>
+  </div>
+  <div>
+    <img src="images/kovugunner2.jpg" alt="Kovu and Gunner 2" width="300">
+    <p>Kovu & Gunner 2</p>
+  </div>
+  <div>
+    <img src="images/kovugunner3.jpg" alt="Kovu and Gunner 3" width="300">
+    <p>Kovu & Gunner 3</p>
+  </div>
+  <div>
+    <img src="images/test upload.jpg" alt="Test Upload" width="300">
+    <p>Test Upload</p>
+  </div>
+</div>
+
+
   <script>
     //Fetch images from EC2 backend (which lists S3 objects)
     fetch('http://34.201.111.213:3000/api/listimages')
